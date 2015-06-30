@@ -18,17 +18,12 @@ test('clicking Adjust Recipe button should double quantity', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.equal(find('.quantity').get(0).textContent, "2");
-    click('.adjust recipe');
-  });
-
-  andThen(function() {
-    assert.equal(find('.quantity').get(3).textContent, "1");
+    assert.equal(find('.quantity').get(0).textContent, "1");
     click('.adjust-recipe');
   });
 
   andThen(function() {
-    assert.equal(find('.quantity').get(5).textContent, "0.6666666666666666");
+    assert.equal(find('.quantity').get(0).textContent, "2");
     click('.adjust-recipe');
   });
 
