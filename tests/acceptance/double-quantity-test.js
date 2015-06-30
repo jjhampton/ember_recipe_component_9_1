@@ -24,7 +24,6 @@ test('clicking Adjust Recipe button should double quantity', function(assert) {
 
   andThen(function() {
     assert.equal(find('.quantity').get(0).textContent, "2");
-    click('.adjust-recipe');
   });
 
 });

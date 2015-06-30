@@ -39,5 +39,13 @@ export default Ember.Route.extend({
         name: "All-purpose flour"
       }
     ];
+  },
+
+  actions: {
+    setDoubleQuantity: function() {
+      this.modelFor(this.routeName).forEach(function(item) {
+        Ember.set(item, 'quantity', item.quantity * 2 );
+      });
+    }
   }
 });
